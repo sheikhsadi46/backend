@@ -2,7 +2,7 @@ import { Pool } from 'pg';
 import { Users, Products, Orders, Items, Transactions } from './schema';
 
 const pool = new Pool({
-  connectionString: 'postgres://lio:1234@localhost/ecommerce',
+  connectionString: process.env.DATABASE,
 });
 
 const createTables = async () => {
